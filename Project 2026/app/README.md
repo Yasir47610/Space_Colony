@@ -192,7 +192,7 @@ Pilot Engineer Medic Scientist Soldier
 ## GitHub & Video Links
 
 - **GitHub Repository:** https://github.com/Yasir47610/Space_Colony/tree/main/Project%202026
-- **Video:** *(your video link)*
+- **Video:** *https://lut-my.sharepoint.com/:v:/g/personal/toki_ahamed_student_lut_fi/IQAA5Uaf13FVQIsBE1HM_H27AT7d8Su92oMpBri44LarPy8?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=XvL8PG*
 
 ---
 
