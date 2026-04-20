@@ -1,0 +1,26 @@
+R_DEF: Internal format may change without notice
+local
+color colorAccent
+color colorBackground
+color colorCardText
+color colorPrimary
+color colorPrimaryDark
+color colorSubText
+color white
+id recyclerView
+id searchBar
+id sortSpinner
+id tabLayout
+id tvPrimary
+id tvSecondary
+id viewPager
+layout activity_main
+layout fragment_list
+layout item_soccer_entity
+string app_name
+string search_hint
+string sort_label
+string tab_matches
+string tab_players
+string tab_teams
+style Theme.SoccerApp

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0D0D2B"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🎯 Mission Control"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="4dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select two crew members and launch a mission."
+        android:textColor="#8888AA"
+        android:textSize="13sp"
+        android:layout_marginBottom="12dp"/>
+
+    <!-- Crew list for selection -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMissionCrew"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="12dp"/>
+
+    <!-- Selected crew display -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#1A1A3E"
+        android:padding="12dp"
+        android:layout_marginBottom="12dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Crew A"
+                android:textColor="#8888AA"
+                android:textSize="11sp"/>
+            <TextView
+                android:id="@+id/tvCrewA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Not selected"
+                android:textColor="#4FC3F7"
+                android:textSize="13sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Crew B"
+                android:textColor="#8888AA"
+                android:textSize="11sp"/>
+            <TextView
+                android:id="@+id/tvCrewB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Not selected"
+                android:textColor="#EF9A9A"
+                android:textSize="13sp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnLaunchMission"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:text="🚀  Launch Mission"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#B71C1C"/>
+
+</LinearLayout>

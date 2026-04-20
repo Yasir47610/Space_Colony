@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0D0D2B">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="➕ Recruit Crew Member"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Name input -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Crew Member Name"
+            android:textColor="#8888AA"
+            android:textSize="13sp"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/etCrewName"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="Enter name..."
+            android:textColor="#FFFFFF"
+            android:textColorHint="#555577"
+            android:background="#1A1A3E"
+            android:padding="12dp"
+            android:inputType="textPersonName"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Specialization selection -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select Specialization"
+            android:textColor="#8888AA"
+            android:textSize="13sp"
+            android:layout_marginBottom="12dp"/>
+
+        <RadioGroup
+            android:id="@+id/rgSpecialization"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="24dp">
+
+            <RadioButton
+                android:id="@+id/rbPilot"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="✈️  Pilot  —  Skill:5  Res:4  Energy:20"
+                android:textColor="#4FC3F7"
+                android:buttonTint="#4FC3F7"
+                android:padding="8dp"
+                android:background="#1A1A3E"
+                android:layout_marginBottom="8dp"/>
+
+            <RadioButton
+                android:id="@+id/rbEngineer"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="🔧  Engineer  —  Skill:6  Res:3  Energy:19"
+                android:textColor="#FFD54F"
+                android:buttonTint="#FFD54F"
+                android:padding="8dp"
+                android:background="#1A1A3E"
+                android:layout_marginBottom="8dp"/>
+
+            <RadioButton
+                android:id="@+id/rbMedic"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="💊  Medic  —  Skill:7  Res:2  Energy:18"
+                android:textColor="#81C784"
+                android:buttonTint="#81C784"
+                android:padding="8dp"
+                android:background="#1A1A3E"
+                android:layout_marginBottom="8dp"/>
+
+            <RadioButton
+                android:id="@+id/rbScientist"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="🔬  Scientist  —  Skill:8  Res:1  Energy:17"
+                android:textColor="#CE93D8"
+                android:buttonTint="#CE93D8"
+                android:padding="8dp"
+                android:background="#1A1A3E"
+                android:layout_marginBottom="8dp"/>
+
+            <RadioButton
+                android:id="@+id/rbSoldier"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="⚔️  Soldier  —  Skill:9  Res:0  Energy:16"
+                android:textColor="#EF9A9A"
+                android:buttonTint="#EF9A9A"
+                android:padding="8dp"
+                android:background="#1A1A3E"
+                android:layout_marginBottom="8dp"/>
+
+        </RadioGroup>
+
+        <!-- Special bonus preview -->
+        <TextView
+            android:id="@+id/tvSpecialBonus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select a specialization to see their special bonus"
+            android:textColor="#8888AA"
+            android:textSize="13sp"
+            android:background="#1A1A3E"
+            android:padding="12dp"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Buttons -->
+        <Button
+            android:id="@+id/btnCreate"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="✅  Recruit"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#1565C0"
+            android:layout_marginBottom="12dp"/>
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Cancel"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#37474F"/>
+
+    </LinearLayout>
+</ScrollView>

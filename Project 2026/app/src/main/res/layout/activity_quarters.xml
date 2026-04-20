@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0D0D2B"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🏠 Quarters"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="4dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Crew members at home. Energy is fully restored here."
+        android:textColor="#8888AA"
+        android:textSize="13sp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- RecyclerView to list crew members in Quarters -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvQuarters"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Action buttons -->
+    <Button
+        android:id="@+id/btnMoveToSimulator"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:text="🎮  Move Selected to Simulator"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#F57F17"
+        android:layout_marginBottom="8dp"/>
+
+    <Button
+        android:id="@+id/btnMoveToMission"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:text="🎯  Move Selected to Mission Control"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#B71C1C"/>
+
+</LinearLayout>

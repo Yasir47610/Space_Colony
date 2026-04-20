@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "com.soccerapp-merged_res-29:/layout_item_soccer_entity.xml.flat",
+        "source": "com.soccerapp-main-31:/layout/item_soccer_entity.xml"
+    },
+    {
+        "merged": "com.soccerapp-merged_res-29:/layout_activity_main.xml.flat",
+        "source": "com.soccerapp-main-31:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.soccerapp-merged_res-29:/layout_fragment_list.xml.flat",
+        "source": "com.soccerapp-main-31:/layout/fragment_list.xml"
+    }
+]

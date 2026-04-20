@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Single row in the stats list showing one crew member's performance numbers -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#1A1A3E"
+    android:padding="12dp"
+    android:layout_marginBottom="6dp">
+
+    <!-- Crew member name colored by specialization -->
+    <TextView
+        android:id="@+id/tvStatName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pilot: Nova"
+        android:textColor="#4FC3F7"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="4dp"/>
+
+    <!-- Stats: missions, wins, training sessions, XP -->
+    <TextView
+        android:id="@+id/tvStatDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Missions: 0 | Wins: 0 | Training: 0 | XP: 0"
+        android:textColor="#8888AA"
+        android:textSize="13sp"/>
+
+</LinearLayout>

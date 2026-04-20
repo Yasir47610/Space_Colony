@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0D0D2B"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🎮 Simulator"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="4dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Train crew members to gain experience points."
+        android:textColor="#8888AA"
+        android:textSize="13sp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- RecyclerView to list crew members in Simulator -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSimulator"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Action buttons -->
+    <Button
+        android:id="@+id/btnTrainSelected"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:text="⭐  Train Selected (+1 XP)"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#F57F17"
+        android:layout_marginBottom="8dp"/>
+
+    <Button
+        android:id="@+id/btnMoveToQuarters"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:text="🏠  Send Selected to Quarters"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#1A237E"/>
+
+</LinearLayout>

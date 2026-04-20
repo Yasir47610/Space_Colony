@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0D0D2B"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="⚔️ Mission in Progress"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="12dp"/>
+
+    <!-- Threat status card -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#2D0000"
+        android:padding="12dp"
+        android:layout_marginBottom="12dp">
+
+        <TextView
+            android:id="@+id/tvThreatName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="☠️ Threat Name"
+            android:textColor="#EF5350"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp"/>
+
+        <ProgressBar
+            android:id="@+id/pbThreatEnergy"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            android:max="100"
+            android:progress="100"
+            android:progressTint="#EF5350"/>
+
+        <TextView
+            android:id="@+id/tvThreatEnergy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Energy: 25/25"
+            android:textColor="#EF9A9A"
+            android:textSize="12sp"
+            android:layout_marginTop="4dp"/>
+    </LinearLayout>
+
+    <!-- Crew A status -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp">
+
+        <ImageView
+            android:id="@+id/ivCrewA"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="12dp"
+            android:src="@android:drawable/ic_menu_myplaces"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#001A3E"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/tvCrewAName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Crew A"
+                android:textColor="#4FC3F7"
+                android:textSize="14sp"
+                android:textStyle="bold"/>
+
+            <ProgressBar
+                android:id="@+id/pbCrewAEnergy"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:max="100"
+                android:progress="100"
+                android:progressTint="#4FC3F7"/>
+
+            <TextView
+                android:id="@+id/tvCrewAEnergy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Energy: 20/20"
+                android:textColor="#8888AA"
+                android:textSize="11sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Crew B status -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="12dp">
+
+        <ImageView
+            android:id="@+id/ivCrewB"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="12dp"
+            android:src="@android:drawable/ic_menu_myplaces"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#3E001A"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/tvCrewBName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Crew B"
+                android:textColor="#EF9A9A"
+                android:textSize="14sp"
+                android:textStyle="bold"/>
+
+            <ProgressBar
+                android:id="@+id/pbCrewBEnergy"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:max="100"
+                android:progress="100"
+                android:progressTint="#EF9A9A"/>
+
+            <TextView
+                android:id="@+id/tvCrewBEnergy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Energy: 16/16"
+                android:textColor="#8888AA"
+                android:textSize="11sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Scrollable mission log -->
+    <ScrollView
+        android:id="@+id/scrollMissionLog"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#111130"
+        android:padding="8dp"
+        android:layout_marginBottom="12dp">
+
+        <TextView
+            android:id="@+id/tvMissionLog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#CCCCCC"
+            android:textSize="13sp"
+            android:fontFamily="monospace"/>
+
+    </ScrollView>
+
+    <!-- Tactical combat buttons (shown during player's turn) -->
+    <LinearLayout
+        android:id="@+id/layoutActions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp">
+
+        <Button
+            android:id="@+id/btnAttack"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text="⚔️ Attack"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#B71C1C"
+            android:layout_marginEnd="4dp"/>
+
+        <Button
+            android:id="@+id/btnDefend"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text="🛡️ Defend"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#1565C0"
+            android:layout_marginEnd="4dp"/>
+
+        <Button
+            android:id="@+id/btnSpecial"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text="⚡ Special"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#6A1B9A"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnFinish"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Return to Mission Control"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#37474F"
+        android:visibility="gone"/>
+
+</LinearLayout>

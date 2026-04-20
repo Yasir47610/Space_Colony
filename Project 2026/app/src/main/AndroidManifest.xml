@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Space Colony"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SpaceColony">
+
+        <!-- Main entry point of the app -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Recruit screen -->
+        <activity android:name=".RecruitActivity" android:exported="false"/>
+
+        <!-- Quarters screen -->
+        <activity android:name=".QuartersActivity" android:exported="false"/>
+
+        <!-- Simulator/training screen -->
+        <activity android:name=".SimulatorActivity" android:exported="false"/>
+
+        <!-- Mission preparation screen -->
+        <activity android:name=".MissionControlActivity" android:exported="false"/>
+
+        <!-- Battle/mission log screen -->
+        <activity android:name=".MissionLogActivity" android:exported="false"/>
+
+        <!-- Statistics screen -->
+        <activity android:name=".StatsActivity" android:exported="false"/>
+
+    </application>
+
+</manifest>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Space Colony</string>
+    <string name="crew_stats">Skill:%1$d | Res:%2$d | XP:%3$d</string>
+    <string name="crew_energy">Energy: %1$d/%2$d</string>
+</resources>
