@@ -2,8 +2,8 @@ package com.example.spacecolony;
 
 /**
  * Scientist specialization.
- * Stats: skill=8, resilience=1, maxEnergy=17
- * Special bonus: Gets +2 skill on solar/radiation missions
+ * Stats are: skill=8, resilience=1, maxEnergy=17
+ * Might get +2 skill on solar/radiation missions on special bonus
  * Color theme: Purple
  */
 public class Scientist extends CrewMember {

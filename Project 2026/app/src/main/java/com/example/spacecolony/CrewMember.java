@@ -2,8 +2,8 @@ package com.example.spacecolony;
 
 /**
  * Base class for all crew member types.
- * Pilot, Engineer, Medic, Scientist, and Soldier all extend this class.
- * This is the core of our OOP design - inheritance + polymorphism.
+ * Pilot, Engineer, Medic, Scientist and Soldier all extend this class.
+ * Here we used inheritance + polymorphism.
  */
 public abstract class CrewMember {
 
@@ -17,13 +17,13 @@ public abstract class CrewMember {
     private int maxEnergy;
     private int id;
 
-    // Each crew member gets a unique ID using this counter
+    // Each of the crew member gets a unique ID using this counter
     private static int idCounter = 1;
 
-    // Where the crew member currently is: "Quarters", "Simulator", "MissionControl", "Medbay"
+    // This is where the crew member currently is: "Quarters", "Simulator", "MissionControl", "Medbay"
     private String location;
 
-    // Stats tracked for the Statistics screen
+    // Stats tracked here for the Statistics screen
     private int missionsCompleted;
     private int missionsWon;
     private int trainingSessions;
@@ -36,7 +36,7 @@ public abstract class CrewMember {
         this.resilience = resilience;
         this.maxEnergy = maxEnergy;
         this.energy = maxEnergy;   // starts at full energy
-        this.experience = 0;       // fresh recruit, no experience yet
+        this.experience = 0;       // fresh recruit so no experience yet
         this.id = idCounter++;     // auto-assign unique ID
         this.location = "Quarters"; // all crew start at home
         this.missionsCompleted = 0;
@@ -93,7 +93,7 @@ public abstract class CrewMember {
         this.trainingSessions++;
     }
 
-    // --- Getters and Setters ---
+    // ( Getters and Setters )
 
     public String getName() { return name; }
     public void setName(String name) { this.name = name; }

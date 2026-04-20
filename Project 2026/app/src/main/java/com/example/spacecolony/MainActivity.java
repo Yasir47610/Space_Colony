@@ -7,18 +7,13 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-/**
- * MainActivity - the home screen of the app.
- * Shows colony status summary and navigation buttons to all other screens.
- * Also handles loading saved data when the app starts.
- */
 public class MainActivity extends AppCompatActivity {
 
-    // UI elements
+    // TextViews and buttons from the main layout
     private TextView tvQuartersCount, tvSimulatorCount, tvMissionCount, tvTotalMissions;
     private Button btnRecruit, btnQuarters, btnSimulator, btnMissionControl, btnStats;
 
-    // Our central data store
+    // Shared app storage
     private Storage storage;
 
     @Override
@@ -26,13 +21,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Get the singleton storage instance
         storage = Storage.getInstance();
 
-        // Try to load any previously saved crew data
-        boolean loaded = storage.loadFromFile(this);
+        // Load previously saved data
+        storage.loadFromFile(this);
 
-        // Hook up all the UI elements to their IDs in activity_main.xml
         tvQuartersCount = findViewById(R.id.tvQuartersCount);
         tvSimulatorCount = findViewById(R.id.tvSimulatorCount);
         tvMissionCount = findViewById(R.id.tvMissionCount);
@@ -43,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         btnMissionControl = findViewById(R.id.btnMissionControl);
         btnStats = findViewById(R.id.btnStats);
 
-        // Set up button click listeners - each button opens a different screen
+        // Open each screen from its button
         btnRecruit.setOnClickListener(v ->
                 startActivity(new Intent(this, RecruitActivity.class)));
 
@@ -63,14 +56,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        // Refresh the colony status counts every time we return to this screen
         updateStatusCounts();
     }
 
-    /**
-     * updateStatusCounts() - refreshes the crew count display for each location.
-     * Called every time MainActivity becomes visible (onResume).
-     */
+    // Update the numbers shown on the home screen
     private void updateStatusCounts() {
         int quartersCount = storage.getCrewByLocation("Quarters").size();
         int simulatorCount = storage.getCrewByLocation("Simulator").size();

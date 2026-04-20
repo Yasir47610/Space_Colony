@@ -13,9 +13,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 /**
- * MissionControlActivity - the battle preparation screen.
- * User selects exactly two crew members by tapping their cards.
- * Then launches the mission which opens MissionLogActivity.
+ * MissionControlActivity, it is the battle preparation screen.
+ * User can select exactly two crew members by tapping their cards.
+ * Then it launches the mission which opens MissionLogActivity.
  */
 public class MissionControlActivity extends AppCompatActivity {
 
@@ -99,7 +99,7 @@ public class MissionControlActivity extends AppCompatActivity {
     }
 
     /**
-     * launchMission() - validates selection and opens the MissionLogActivity.
+     * launchMission(), it validates selection and opens the MissionLogActivity.
      * Passes the IDs of the two selected crew members via Intent extras.
      */
     private void launchMission() {

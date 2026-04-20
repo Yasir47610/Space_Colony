@@ -12,14 +12,14 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 /**
- * MissionLogActivity - the battle screen where missions play out.
- * Implements TACTICAL COMBAT (bonus feature): player chooses Attack, Defend, or Special
+ * MissionLogActivity, this is the battle screen where missions play out.
+ * Implements TACTICAL COMBAT (bonus feature): player chooses Attack, Defend, or Special here
  * each turn instead of the mission being fully automatic.
- * Shows live energy bars for both crew members and the threat (Mission Visualization bonus).
+ * It shows live energy bars for both crew members and the threat (Mission Visualization bonus).
  */
 public class MissionLogActivity extends AppCompatActivity {
 
-    // Threat and crew status UI
+    // Threats and crew status UI
     private TextView tvThreatName, tvThreatEnergy, tvCrewAName, tvCrewAEnergy, tvCrewBName, tvCrewBEnergy;
     private ProgressBar pbThreatEnergy, pbCrewAEnergy, pbCrewBEnergy;
     private ImageView ivCrewA, ivCrewB;
@@ -37,7 +37,7 @@ public class MissionLogActivity extends AppCompatActivity {
     private Threat threat;
     private Storage storage;
 
-    // Tracks whose turn it is: true = crewA, false = crewB
+    // Tracks whose turn it is, so if  true = crewA, if false = crewB
     private boolean isCrewATurn = true;
     private boolean missionOver = false;
 
@@ -51,17 +51,17 @@ public class MissionLogActivity extends AppCompatActivity {
 
         storage = Storage.getInstance();
 
-        // Get the crew member IDs passed from MissionControlActivity
+        // Gets the crew member IDs passed from MissionControlActivity
         int crewAId = getIntent().getIntExtra("crewAId", -1);
         int crewBId = getIntent().getIntExtra("crewBId", -1);
 
         crewA = storage.getCrewMember(crewAId);
         crewB = storage.getCrewMember(crewBId);
 
-        // Create a new threat scaled to current mission count
+        // It creates a new threat scaled to current mission count
         threat = new Threat(storage.getMissionCount());
 
-        // Hook up all UI elements
+        // Hooks up all UI elements
         tvThreatName = findViewById(R.id.tvThreatName);
         tvThreatEnergy = findViewById(R.id.tvThreatEnergy);
         tvCrewAName = findViewById(R.id.tvCrewAName);
@@ -81,18 +81,18 @@ public class MissionLogActivity extends AppCompatActivity {
         btnSpecial = findViewById(R.id.btnSpecial);
         btnFinish = findViewById(R.id.btnFinish);
 
-        // Set crew images based on specialization
+        // Sets crew images based on specialization
         ivCrewA.setImageResource(getCrewImage(crewA.getSpecialization()));
         ivCrewB.setImageResource(getCrewImage(crewB.getSpecialization()));
 
-        // Show mission intro in the log
+        // Shows mission intro in the log
         appendLog("=== MISSION: " + threat.getName() + " ===");
         appendLog("Threat: " + threat.toString());
         appendLog(crewA.toString());
         appendLog(crewB.toString());
         appendLog("\n--- Your turn: " + getCurrentCrewName() + " ---");
 
-        // Update all the energy bars to starting values
+        // It updates all the energy bars to starting values
         updateUI();
 
         // --- Tactical Combat Button Listeners ---
@@ -117,9 +117,9 @@ public class MissionLogActivity extends AppCompatActivity {
     }
 
     /**
-     * performAction() - handles the player's chosen action for their crew member's turn.
+     * performAction(), it handles the player's chosen action for their crew member's turn.
      * After the player acts, the threat retaliates automatically.
-     * Then switches to the other crew member's turn.
+     * Then it switches to the other crew member's turn.
      */
     private void performAction(String action) {
         CrewMember current = isCrewATurn ? crewA : crewB;
@@ -238,7 +238,7 @@ public class MissionLogActivity extends AppCompatActivity {
     }
 
     /**
-     * missionSuccess() - called when the threat's energy reaches 0.
+     * missionSuccess(), it is called when the threat's energy reaches 0.
      * Awards XP to surviving crew members and updates stats.
      */
     private void missionSuccess() {
@@ -273,7 +273,7 @@ public class MissionLogActivity extends AppCompatActivity {
     }
 
     /**
-     * missionFail() - called when both crew members are defeated.
+     * missionFail(), it is called when both crew members are defeated.
      * Removes both crew members from the program permanently.
      */
     private void missionFail() {
@@ -299,7 +299,7 @@ public class MissionLogActivity extends AppCompatActivity {
     }
 
     /**
-     * updateUI() - refreshes all energy bars and text displays.
+     * updateUI(), it refreshes all energy bars and text displays.
      * Called after every action so the player sees live updates.
      */
     private void updateUI() {
@@ -323,7 +323,7 @@ public class MissionLogActivity extends AppCompatActivity {
     }
 
     /**
-     * appendLog() - adds a line to the mission log TextView.
+     * appendLog(), it adds a line to the mission log TextView.
      */
     private void appendLog(String text) {
         missionLog.append(text).append("\n");
@@ -331,7 +331,7 @@ public class MissionLogActivity extends AppCompatActivity {
     }
 
     /**
-     * getCurrentCrewName() - returns the name of whichever crew member's turn it is.
+     * getCurrentCrewName(), it returns the name of whichever crew member's turn it is.
      */
     private String getCurrentCrewName() {
         CrewMember current = isCrewATurn ? crewA : crewB;
@@ -339,7 +339,7 @@ public class MissionLogActivity extends AppCompatActivity {
     }
 
     /**
-     * getCrewImage() - returns drawable resource ID for specialization image.
+     * getCrewImage(), this returns drawable resource ID for specialization image.
      */
     private int getCrewImage(String specialization) {
         switch (specialization) {

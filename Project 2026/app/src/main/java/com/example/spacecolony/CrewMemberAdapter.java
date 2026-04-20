@@ -18,8 +18,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * CrewMemberAdapter - connects our crew member data to the RecyclerView UI.
- * Each row shows a crew member card with their stats, energy bar, and a checkbox.
+ * CrewMemberAdapter, this connects our crew member data to the RecyclerView UI.
+ * Each row shows a crew member card with their stats, energy bar and a checkbox.
  * The checkbox lets users select multiple crew members for training or moving.
  */
 public class CrewMemberAdapter extends RecyclerView.Adapter<CrewMemberAdapter.CrewViewHolder> {
@@ -53,7 +53,7 @@ public class CrewMemberAdapter extends RecyclerView.Adapter<CrewMemberAdapter.Cr
     public void onBindViewHolder(@NonNull CrewViewHolder holder, int position) {
         CrewMember cm = crewList.get(position);
 
-        // Fill in the crew member info
+        // Fills in the crew member info
         holder.tvCrewName.setText(cm.getName());
         holder.tvSpecialization.setText(cm.getSpecialization());
         holder.tvStats.setText("Skill:" + (cm.getSkill() + cm.getExperience())
@@ -65,7 +65,7 @@ public class CrewMemberAdapter extends RecyclerView.Adapter<CrewMemberAdapter.Cr
         holder.pbEnergy.setProgress(energyPercent);
         holder.tvEnergy.setText("Energy: " + cm.getEnergy() + "/" + cm.getMaxEnergy());
 
-        // Color the energy bar based on how full it is
+        // It Colors the energy bar based on how full it is
         if (energyPercent > 60) {
             holder.pbEnergy.setProgressTintList(
                     ColorStateList.valueOf(Color.parseColor("#4CAF50")));
@@ -77,15 +77,15 @@ public class CrewMemberAdapter extends RecyclerView.Adapter<CrewMemberAdapter.Cr
                     ColorStateList.valueOf(Color.parseColor("#F44336")));
         }
 
-        // Set crew image and specialization color
+        // Sets crew image and specialization color
         holder.ivCrewImage.setImageResource(getCrewImage(cm.getSpecialization()));
         holder.tvSpecialization.setTextColor(getSpecializationColor(cm.getSpecialization()));
 
-        // Sync checkbox without triggering listener
+        // It Syncs checkbox without triggering listener
         holder.cbSelect.setOnCheckedChangeListener(null);
         holder.cbSelect.setChecked(selectedCrew.contains(cm));
 
-        // Checkbox toggle handler
+        // Checkbox toggles the handler
         holder.cbSelect.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if (isChecked) {
                 if (!selectedCrew.contains(cm)) selectedCrew.add(cm);
